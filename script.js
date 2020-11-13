@@ -25,3 +25,11 @@ fetch("https://api.github.com/graphql", requestOptions)
 // const d = new Date('');
 // d.getDay(): format(d.getMonth())
 // const month = d.toLocalString('default', {month: 'short'})
+
+// HAMBURGER NAV FUNCTIONALITY
+const menu = document.getElementById('menu');
+const mobileNav = document.getElementById('mobile-nav');
+
+menu.addEventListener('click', () => {
+    mobileNav.classList.toggle('show');
+})
