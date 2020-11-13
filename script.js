@@ -1,8 +1,8 @@
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer 689aeb83862bdd5610fc2ca34053bd2513fe0c66");
+myHeaders.append("Authorization", "Bearer 2a17dd32d76cf42e775f07f433ba14259343ba79");
 myHeaders.append("Content-Type", "application/json");
 
-var raw = JSON.stringify({"query":"query { viewer { avatarUrl,name, login,bio, followers {totalCount} following {totalCount} starredRepositories {totalCount }email twitterUsername repositories(last: 20) { totalCount nodes {name,stargazerCount,description,updatedAt, forkCount, primaryLanguage { name } }}}}"});
+var raw = JSON.stringify({"query":"query { viewer { avatarUrl,name, login,bio, followers {totalCount} following {totalCount} starredRepositories {totalCount }twitterUsername repositories(last: 20) { totalCount nodes {name,stargazerCount,description,updatedAt, forkCount, primaryLanguage { name } }}}}"});
 
 var requestOptions = {
   method: 'POST',
