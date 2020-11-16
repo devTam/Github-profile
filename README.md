@@ -13,6 +13,10 @@ A clone of the repository tab of my github profile using the github graphql API.
 
 2. **Just add your github personal access token to the token variable inside the script file**
 
+[Get access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+
+Make sure to check repo and user under scopes.
+
 Edit the script.js file to hold your github token
 
     # Github GraphQL API (Public and Private)
