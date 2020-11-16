@@ -36,8 +36,6 @@ Then run the server command in the command line
 npx http-server
 ```
 
-**View site on your web browser**
-
-Go to **http://localhost:8080** to view the site
+Http-server runs the site which can be viewed on **http://localhost:8080** to view the site
 
 
