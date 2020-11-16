@@ -1,7 +1,7 @@
 // API CALL
 const apiCall = async () => {
   // REPLACE WITH YOUR GITHUB PERSONAL ACCESS TOKEN
-  const token = '731428e4617bc3a481097e60333a329870e83741';
+  const token = 'bb01dd0e2941ca79f1a3d3acd128a47c1a71fcb2';
 
   const myHeaders = {
     "Authorization": `Bearer ${token}`,
@@ -78,7 +78,12 @@ function updateUI(APIData) {
 
     // SET PROFILE EMAIL
     const profileEmail = document.getElementById('profile-email');
-    profileEmail.innerText = email;
+    if(email) {
+      profileEmail.innerText = email;
+    }else {
+      const emailContainer = document.querySelector('.email');
+      emailContainer.style.display = 'none'
+    }
 
     // SET NUMBER OF REPOS
     const repoCount = document.getElementById('repo-count')
