@@ -1,14 +1,14 @@
 // API CALL
 const apiCall = async () => {
   // REPLACE WITH YOUR GITHUB PERSONAL ACCESS TOKEN
-  const token = 'bb01dd0e2941ca79f1a3d3acd128a47c1a71fcb2';
+  const token = '293868048ab4452d613402c417e1b7daab187a22';
 
   const myHeaders = {
     "Authorization": `Bearer ${token}`,
     "Content-Type": "application/json"
   }
 
-  const raw = JSON.stringify({ "query": "query { viewer { avatarUrl email name login bio followers {totalCount} following {totalCount} starredRepositories {totalCount } repositories(last: 20) { totalCount nodes {name,stargazerCount,description,updatedAt, forkCount, primaryLanguage { name } }}}}" });
+  const raw = JSON.stringify({ "query": "query { viewer { avatarUrl email name login bio followers {totalCount} following {totalCount} starredRepositories {totalCount } repositories(last: 20, affiliations: [OWNER]) { totalCount nodes {name,stargazerCount,description,updatedAt, forkCount, primaryLanguage { name } }}}}" });
 
   const requestOptions = {
     method: 'POST',
@@ -93,6 +93,7 @@ function updateUI(APIData) {
 
   //   FORMAT DATE
   function formatDate(date) {
+    console.log(date)
     const rawDate = new Date(date);
     const day = rawDate.getDate();
     var monthNumber = rawDate.getMonth()
